@@ -1,0 +1,20 @@
+<div class="text-center mb-16">
+    <div class="dm-sans-font font-bold m-1 text-[30px] sm:text-[48px] text-[#23262F]">
+        Search the best place in the world
+    </div>
+    <div class="popins-font font-normal text-[14px] sm:text-[16px] text-[#84878B]">
+        Whether you’re looking for places for a <br class="sm:hidden"> vacation. We are here to Guide you <br>
+        about the details you need to check in <br class="sm:hidden"> and ease your trips in advance
+    </div>
+</div>
+<div class="flex flex-nowrap overflow-scroll sm:overflow-auto sm:grid sm:grid-cols-4 sm:gap-8">
+    <app-best-place-card 
+    *ngFor="let data of datas"
+    [name]="data.name"
+    [img]="data.img"
+    [hot]="data.hot"
+    [detinations]="data.detinations"
+    >
+
+    </app-best-place-card>
+</div>

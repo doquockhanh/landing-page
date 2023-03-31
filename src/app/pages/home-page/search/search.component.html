@@ -1,0 +1,172 @@
+<div id="search" class="grid grid-cols-1 sm:grid-cols-6 text-sm font-medium text-gray-500 border-gray-200">
+    <div class="sm:col-span-5">
+        <ul class="sm:flex sm:justify-between">
+            <div class="flex">
+                <li class="mr-2">
+                    <a class="inline-block p-4 text-blue-600 rounded-t-lg border-b-2 border-blue-600 active"><i class="fa-solid fa-bed"></i> Hotel</a>
+                </li>
+                <li>
+                    <a class="inline-block p-4 text-gray-400 rounded-t-lg cursor-not-allowed dark:text-gray-500"><i class="fa-solid fa-plane-departure"></i> Flight</a>
+                </li>
+                <li>
+                    <a class="inline-block p-4 text-gray-400 rounded-t-lg cursor-not-allowed dark:text-gray-500"><i class="fa-solid fa-car-side"></i> Car rental</a>
+                </li>
+            </div>
+            <hr class="sm:hidden">
+            <div class="flex">
+                <li>
+                    <span class="inline-block p-4 dm-sans-font font-medium text-[16px] text-[#3B3E44]">
+                        Road trip 
+                        <i class="fa-solid fa-angle-down text-[#84878B] text-[10px]"></i>
+                    </span> 
+                </li>
+                <li>
+                    <button (click)="togglePassenger()">
+                        <span class="inline-block p-4 dm-sans-font font-medium text-[16px] text-[#3B3E44]">
+                            {{'1 '}}  Passenger 
+                            <i class="fa-solid fa-angle-down text-[#84878B] text-[10px]"></i>
+                        </span> 
+                    </button>
+                </li>
+            </div>
+        </ul> 
+        <hr class="hidden sm:block">
+        <div>
+            <div class="grid grid-cols-1 sm:grid-cols-12 gap-1">
+                <div class="sm:col-span-5 input-area sm:my-8 p-4 pl-8">
+                    <label>Location</label><br>
+                    <input [value]="data.location" class="hidden sm:block w-[80%] sm:w-full" type="text" list="location" placeholder="Where are you from?">
+                    <input (click)="toggleLocationModal()" [value]="data.location" class="sm:hidden w-[80%] sm:w-full" type="text" placeholder="Where are you from?">
+                    <datalist id="location">
+                        <option data-="fa-location-pin" value="Dubai">Dubai Emirate, United Arab Emirates</option>
+                        <option value="Doha">Qatar</option>
+                        <option value="Darling Harbour">Sydney, New South Wales, Australia</option>
+                        <option value="Dhaka">Bangladesh</option>
+                        <option value="Dubai International Airport">Dubai, Dubai Emirate, United Arab Emirates</option>
+                    </datalist>
+                    <div class="circle hidden sm:block">
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                    </div> 
+                </div>
+                <div class="sm:col-span-7">
+                    <div class="grid grid-cols-2 gap-1">
+                        <div class="input-area sm:my-8 p-4 pl-8 ">
+                            <label>Check in</label><br>
+                            <input class="w-[80%] sm:w-full" datepicker datepicker-orientation="bottom" type="text" placeholder="Add date">
+                            <div class="circle hidden sm:block">
+                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                            </div>
+                        </div>
+                        <div class="input-area sm:my-8 p-4 pl-8 ">
+                            <label>Check out</label><br>
+                            <input class="w-[80%] sm:w-full" datepicker datepicker-orientation="bottom" type="text" placeholder="Add date">
+                        </div>
+                        <div class="col-span-2 sm:hidden">
+                            <div class="input-area sm:my-8 p-4 pl-8">
+                                <label>Passenger</label><br>
+                                <input (click)="togglePassenger()" [value]="data.passenger" class="w-[80%] sm:w-full" type="text" placeholder="Add passenger">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button class="w-full py-3 mt-2 mb-6 sm:mt-[5.5rem] sm:ml-5 sm:px-12 sm:py-5 bg-blue-600 text-white text-xl dm-sans-font rounded-lg ">Search</button>
+    </div>
+</div>
+
+<!-- Passenger form -->
+<div *ngIf="showPassenger" id="passenger" class="hidden sm:block w-[25%] dm-sans-font p-4 rounded-[20px] bg-white text-[#777E90]">
+    <div class="flex justify-between items-center p-4">
+        <div class="leading-4">
+            <p class="text-[16px] font-medium">Adults</p>
+            <p class="text-[14px] font-normal">Age 13 or ablove</p>
+        </div>
+        <div class="flex">
+            <div class="circle2" (click)="changeAdult(-1)"> - </div>  <div class="mt-2 w-6 text-center">{{passenger.adult}}</div> <div class="circle2" (click)="changeAdult(1)"> + </div>
+        </div>
+    </div>
+    <hr>
+    <div class="flex justify-between items-center p-4">
+        <div class="leading-4">
+            <p class="text-[16px] font-medium">Children</p>
+            <p class="text-[14px] font-normal">Ages 2-12</p>
+        </div>
+        <div class="flex">
+            <div class="circle2" (click)="changeChildren(-1)"> - </div>  <div class="mt-2 w-6 text-center">{{passenger.children}}</div> <div class="circle2" (click)="changeChildren(1)"> + </div>
+        </div>
+    </div>
+    <hr>
+    <div class="flex justify-between items-center p-4">
+        <div class="leading-4">
+            <p class="text-[16px] font-medium">Infants</p>
+            <p class="text-[14px] font-normal">under 2</p>
+        </div>
+        <div class="flex">
+            <div class="circle2" (click)="changeInfant(-1)"> - </div> <div class="mt-2 w-6 text-center">{{passenger.infant}}</div> <div class="circle2" (click)="changeInfant(1)"> + </div>
+        </div>
+    </div>
+</div>
+
+<!-- location modal mobile -->
+<div *ngIf="showLocationModal" class="fixed top-0 ml-[-2.5rem] w-[101vw] h-[100vh] bg-[#F9F9F9] p-6 z-10 sm:hidden" id="location">
+    <div class="sm:col-span-5 input-area sm:my-8 p-4 pl-8">
+        <label class="dm-sans-font font-medium text-[18px]">Location</label><br>
+        <input (change)="changeLocationData($event)" [value]="data.location" class="w-[80%] sm:w-full" type="text" list="location2" placeholder="Where are you from?">
+        <datalist id="location2">
+            <option value="Dubai">Dubai Emirate, United Arab Emirates</option>
+            <option value="Doha">Qatar</option>
+            <option value="Darling Harbour">Sydney, New South Wales, Australia</option>
+            <option value="Dhaka">Bangladesh</option>
+            <option value="Dubai International Airport">Dubai, Dubai Emirate, United Arab Emirates</option>
+        </datalist>
+        <div class="circle hidden sm:block">
+            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+        </div> 
+    </div>
+    <div class="grid gap-2">
+        <button class="py-2 px-4 bg-[#3B71FE] my-2 rounded-lg" (click)="toggleLocationModal()">Done</button>
+    </div>
+</div>
+
+<!-- Passenger modal mobile -->
+<div *ngIf="showPassenger" class="fixed top-0 ml-[-2.5rem] w-[101vw] h-[100vh] bg-[#F9F9F9] p-6 z-10 sm:hidden">
+    <div class="sm:col-span-5 input-area sm:my-8 p-4">
+        <div class="dm-sans-font rounded-[20px] bg-white text-[#777E90]">
+            <div class="flex justify-between items-center p-4">
+                <div class="leading-4">
+                    <p class="text-[16px] font-medium">Adults</p>
+                    <p class="text-[14px] font-normal">Age 13 or ablove</p>
+                </div>
+                <div class="flex">
+                    <div class="circle2" (click)="changeAdult(-1)"> - </div>  <div class="mt-2 w-6 text-center">{{passenger.adult}}</div> <div class="circle2" (click)="changeAdult(1)"> + </div>
+                </div>
+            </div>
+            <hr>
+            <div class="flex justify-between items-center p-4">
+                <div class="leading-4">
+                    <p class="text-[16px] font-medium">Children</p>
+                    <p class="text-[14px] font-normal">Ages 2-12</p>
+                </div>
+                <div class="flex">
+                    <div class="circle2" (click)="changeChildren(-1)"> - </div>  <div class="mt-2 w-6 text-center">{{passenger.children}}</div> <div class="circle2" (click)="changeChildren(1)"> + </div>
+                </div>
+            </div>
+            <hr>
+            <div class="flex justify-between items-center p-4">
+                <div class="leading-4">
+                    <p class="text-[16px] font-medium">Infants</p>
+                    <p class="text-[14px] font-normal">under 2</p>
+                </div>
+                <div class="flex">
+                    <div class="circle2" (click)="changeInfant(-1)"> - </div> <div class="mt-2 w-6 text-center">{{passenger.infant}}</div> <div class="circle2" (click)="changeInfant(1)"> + </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid gap-2">
+        <button class="py-2 px-4 bg-[#3B71FE] my-2 rounded-lg" (click)="submitPassengerModal()">Done</button>
+    </div>
+</div>

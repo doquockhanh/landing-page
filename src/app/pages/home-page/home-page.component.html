@@ -1,0 +1,102 @@
+<div #header id="header">
+    <img class="object-none h-[604px] sm:object-cover sm:w-full sm:h-auto" src="./assets/img/banner-background.png">
+    <div id="navbar" class="w-full">
+        <div class="flex justify-between">
+            <div class="mx-2 m-3 sm:mx-6">
+                <img class="w-24 h-7 sm:w-28" src="./assets/img/logo.png">
+            </div>
+            <div class="m-3 flex items-center">
+                <div class="mr-2 sm:mr-4 font-bold rob-font text-medium">USD</div>
+                <img class="mr-2 w-4 h-4 sm:mr-4" src="./assets/img/flag-united-states.png"/>
+                <img class="mr-2 w-4 h-4 sm:mr-4" src="./assets/img/notification.png"/>
+                <div class="h-8 border-l-2"></div>
+                <img class="ml-2 mr-2 w-7 h-7 sm:ml-4" src="./assets/img/Rectangle_058.png"/> 
+                <span class="mr-2 sm:mr-4 rob-font font-medium hidden sm:block sm:text-[14px]">Delowar</span>
+                <i class="fa-solid fa-caret-down hidden sm:block"></i>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div id="banner-text" class="ml-4 top-[12%] text-[36px] sm:leading-[80px] sm:text-[64px] sm:top-[30%] font-bold popins-font">
+            Book With Us <br>
+            And Enjoy your <br>
+            Journey ! <br>
+        </div>
+        <div class="search-area w-11/12 sm:w-4/5 px-5 sm:px-10">
+            <app-search></app-search>
+        </div>
+    </div>
+</div>
+<div #content>
+    <div #bestPlace class="content mt-36">
+        <app-best-place></app-best-place>
+    </div>
+    <div #featureDestination class="content mt-10 mb-4">
+        <app-feature-destinations></app-feature-destinations>
+    </div>
+    <div #topTour class="content mt-10 mb-4">
+       <app-top-tour></app-top-tour>
+    </div>
+    <div #exploreTheWorld class="content mt-10 mb-4">
+        <div class="pb-12">
+            <app-explore-world></app-explore-world>
+        </div>
+    </div>
+    <div #trendingCity id="trending-city" class="mt-10 mb-4">
+        <div class="content pt-6 pb-16">
+            <app-trending-cities></app-trending-cities>
+        </div>
+    </div>
+    <div #travelYourPassion id="travel" class="content mt-10 mb-4">
+        <div class="pb-24 sm:pb-48">
+            <app-travel></app-travel>
+        </div>
+        <div #offer id="offer">
+            <app-offer-card></app-offer-card>
+        </div>
+    </div>
+    <div #footer id="footer">
+        <div class="content px-4 py-24 sm:px-12 sm:py-36 grid grid-cols-1 sm:grid-cols-3 gap-8">
+            <div class="hidden sm:block dm-sans-font font-normal text-[16px] text-[#84878B]">
+                <img class="w-36 h-10 mb-6" src="./assets/img/logo.png">
+                This is the team that specializes in <br>
+                making sure in the find it a  <br>
+                your interior looks cool
+                <div class="flex mt-6" (click)="showAlert('coming soon')">
+                    <div class="bg-white rounded-lg w-auto px-[0.8rem] py-[0.2rem]">
+                        <a class="mr-4 rounded-lg px-3 py-[0.15rem] shadow-small"><i class="fa-solid fa-sun"></i></a>
+                        <a class=""><i class="fa-regular fa-moon"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-1 sm:col-span-2">
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 dm-sans-font font-medium">
+                    <div>
+                        <h5 class="text-[24px]">Service</h5>
+                        <p>Travel booking</p>
+                        <p>Flight Booking</p>
+                        <p>Car Booking</p>
+                        <p>Fivestar Hotel</p>
+                        <p>Traveling</p>
+                    </div>
+                    <div>
+                        <h5 class="text-[24px]">Support</h5>
+                        <p>Account</p>
+                        <p>Legal</p>
+                        <p>Contact</p>
+                        <p>Terms & Condition</p>
+                        <p>Privacy Policy</p>
+                    </div>
+                    <div>
+                        <h5 class="text-[24px]">Business</h5>
+                        <p>Success</p>
+                        <p>About Locato</p>
+                        <p>Blog</p>
+                        <p>Information</p>
+                        <p>Travel Guide</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

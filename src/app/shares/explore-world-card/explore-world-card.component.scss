@@ -1,0 +1,37 @@
+.card {
+    border-radius: 20px;
+
+    >:nth-child(2) {
+        font-size: 14px;
+        font-weight: bold;
+        i {
+            color: #FFD166;
+        }
+    }
+
+    :nth-child(3) {
+        position: relative;
+        font-size: 20px;
+    }
+    :nth-child(4), :nth-child(5) {
+        font-size: 14px;
+    }
+}
+
+.text-gray {
+    color: #84878B;
+}
+
+.text-more-gray {
+    color: #3B3E44;
+}
+
+.price-label {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgba(49, 107, 255, 0.2);
+    color: #316BFF;
+    font-size: 18px;
+}
+

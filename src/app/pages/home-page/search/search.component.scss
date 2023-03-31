@@ -1,0 +1,53 @@
+#search {
+    position: relative;
+}
+
+#passenger {
+    position: absolute;
+    top: -16rem;
+    right: 0;
+}
+
+.input-area {
+    position: relative;
+    background-color: #E7E8EA;
+    border-radius: 8px;
+}
+
+input {
+    background-color: inherit;
+    border: none;
+    padding: 0;
+}
+
+input:focus {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.circle {
+    border-radius: 100%;
+    position: absolute;
+    top: 33%;
+    right: -1.1rem;
+    background-color: #ffffff;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 2rem;
+    z-index: 1;
+}
+
+.circle2 {
+    border-radius: 100%;
+    border: 1px solid gray;
+    background-color: #ffffff;
+    width: 1.5rem;
+    height: 1.5rem;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.3rem;
+    z-index: 1;
+    margin: 0.5rem;
+}

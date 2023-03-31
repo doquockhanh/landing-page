@@ -1,0 +1,26 @@
+.hot {
+    position: relative;
+    background: #EE6D52;
+    width: 2.5rem;
+    height: 0.86rem;
+    font-size: x-small;
+    text-align: center;
+}
+
+.hot:after {
+    content: "";
+    position: absolute;
+    left: -0.6rem;
+    border-right: 0.6rem solid #EE6D52;
+    border-top: 0.5rem solid transparent;
+    border-bottom: 0.43rem solid transparent;
+}
+
+.hot:before {
+    content: "";
+    position: absolute;
+    right: -0.5rem;
+    border-left: 0.6rem solid #EE6D52;
+    border-top: 0.5rem solid transparent;
+    border-bottom: 0.4rem solid transparent;
+}

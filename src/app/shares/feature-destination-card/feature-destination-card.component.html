@@ -1,0 +1,13 @@
+<div class="card dm-sans-font w-full overflow-hidden bg-slate-100 rounded-lg border border-gray-200 shadow-md hover:bg-white">
+    <img [src]="img || './assets/img/no-img.png'">
+    <div class="rate m-6 mr-[2.11rem] text-white">
+        {{star}}
+    </div>
+    <div class="text mx-6">
+        <p class="text-big font-bold tracking-tight text-white">{{name || "No name"}}</p>
+        <p class="text-small mb-3 text-white">
+            <img class="w-5 h-5 rounded-full" [src]="img || './assets/img/no-img.png'" alt="senior-man"/> 
+            {{activities || 0}} Activities
+        </p>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="text-center ml-3 mt-12 mb-10">
+    <div class="dm-sans-font font-bold text-[30px] sm:text-[48px] text-[#141416]">
+        Trending cites
+    </div>
+    <div class="mt-2 popins-font font-normal text-[14px] sm:text-[16px] text-[#3B3E44]">
+        The most searched for cities on TripGuide
+    </div>
+</div>
+<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-8">
+    <app-trending-city-card
+    *ngFor="let data of datas"
+    [name]="data.name"
+    [img]="data.img"
+    ></app-trending-city-card>
+</div>
+

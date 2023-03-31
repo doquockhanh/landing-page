@@ -1,0 +1,64 @@
+<div class="ml-3 mt-12 mb-10 text-center sm:text-left">
+    <div class="dm-sans-font font-bold text-[30px] sm:text-[48px] text-[#141416]">
+        Featured <br class="sm:hidden"> Destinations
+    </div>
+    <div class="popins-font font-normal text-[14px] sm:text-[16px] text-[#3B3E44]">
+        Popular destinations open to <br class="sm:hidden"> visitors from Indonesia
+    </div>
+</div>
+<div class="grid grid-cols-1 gap-4 sm:grid-cols-4 sm:gap-6">
+    <div class="sm:col-span-3">
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
+            <div class="sm:col-span-2">
+                <app-feature-destination-card
+                   [name]="datas[0].name"
+                   [star]="datas[0].star"
+                   [activities]="datas[0].activities"
+                   [img]="datas[0].img"
+                ></app-feature-destination-card>
+            </div>
+            <div>
+                <app-feature-destination-card
+                [name]="datas[1].name"
+                [star]="datas[1].star"
+                [activities]="datas[1].activities"
+                [img]="datas[1].img"
+                ></app-feature-destination-card>
+            </div>
+            <div>
+                <app-feature-destination-card
+                [name]="datas[2].name"
+                [star]="datas[2].star"
+                [activities]="datas[2].activities"
+                [img]="datas[2].img"
+                ></app-feature-destination-card>
+            </div>
+        </div>
+    </div>
+    <div class="grid grid-cols-1 gap-4 sm:gap-6"> 
+        <div>
+            <app-feature-destination-card
+            [name]="datas[3].name"
+            [star]="datas[3].star"
+            [activities]="datas[3].activities"
+            [img]="datas[3].img"
+            ></app-feature-destination-card>
+        </div>
+        <div>
+            <app-feature-destination-card
+            [name]="datas[4].name"
+            [star]="datas[4].star"
+            [activities]="datas[4].activities"
+            [img]="datas[4].img"
+            ></app-feature-destination-card>
+        </div>
+        <div>
+            <app-feature-destination-card
+            [name]="datas[5].name"
+            [star]="datas[5].star"
+            [activities]="datas[5].activities"
+            [img]="datas[5].img"
+            ></app-feature-destination-card>
+        </div>
+    </div>
+</div>

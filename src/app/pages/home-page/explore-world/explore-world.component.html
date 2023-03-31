@@ -1,0 +1,14 @@
+<div class="ml-3 mt-12 mb-10 text-center sm:text-left">
+    <div class="dm-sans-font font-bold text-[30px] sm:text-[48px] text-[#141416]">
+        Explore The World
+    </div>
+    <div class="popins-font font-normal text-[14px] sm:text-[16px] text-[#3B3E44]">
+        10,788 beautiful places to go
+    </div>
+</div>
+<div class="flex flex-nowrap overflow-scroll sm:overflow-auto sm:grid sm:grid-cols-4 sm:gap-6">
+    <app-explore-world-card
+    *ngFor="let data of datas"
+    [img]="data.img"
+    ></app-explore-world-card>
+</div>

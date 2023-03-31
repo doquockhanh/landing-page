@@ -1,0 +1,28 @@
+.card {
+    border-radius: 16px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+
+    .text {
+        position: absolute;
+        bottom: 0;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(1, 1, 1, 0.5) 100%);
+    }
+
+    i {
+        color: #FFD166;
+    }
+}
+
+img {
+    border-radius: 16px;
+}
+
+.text-big {
+    font-size: 24px;
+}
+
+.text-small {
+    font-size: 14px;
+}

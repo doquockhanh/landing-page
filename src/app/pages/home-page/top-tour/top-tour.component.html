@@ -1,0 +1,16 @@
+<div class="text-center sm:text-left dm-sans-font font-bold text-[30px] sm:text-[48px] text-[#141416] ml-3 mt-12 mb-10">
+    <div class="dm-sans-font font-bold text-[30px] sm:text-[48px] text-[#141416]">
+        Top tour
+    </div>
+    <div class="popins-font font-normal text-[14px] sm:text-[16px] text-[#3B3E44]">
+        Keep calm & travel on
+    </div>
+</div>
+<div class="grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-8">
+    <app-top-tour-card
+    *ngFor="let data of datas"
+    [name]="data.name"
+    [country]="data.country"
+    [img]="data.img"
+    ></app-top-tour-card>
+</div>
